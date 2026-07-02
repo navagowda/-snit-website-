@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
-  Laptop, Award, Users, BookOpenCheck, ArrowRight, Sparkles, ShieldCheck, Clock,
+  Laptop, Award, Users, BookOpenCheck, ArrowRight, Sparkles, ShieldCheck, Clock, UserRound,
 } from "lucide-react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -126,13 +126,42 @@ export default function HomePage() {
           <span className="flex items-center gap-2 text-sm"><ShieldCheck size={18} className="text-gold-deep dark:text-gold" /> RCSS Bangalore Recognized</span>
           <span className="flex items-center gap-2 text-sm"><Award size={18} className="text-gold-deep dark:text-gold" /> Govt. of Karnataka Recognized</span>
           <span className="flex items-center gap-2 text-sm"><Sparkles size={18} className="text-gold-deep dark:text-gold" /> Skill India Recognized</span>
-          <span className="flex items-center gap-2 text-sm"><Clock size={18} className="text-gold-deep dark:text-gold" /> 15+ Years Serving Mulbagal</span>
+          <span className="flex items-center gap-2 text-sm"><Clock size={18} className="text-gold-deep dark:text-gold" /> 20+ Years Serving Mulbagal</span>
         </div>
       </Section>
 
       {/* FAQ */}
       <Section eyebrow="FAQ" title="Common questions from new students">
         <FAQ items={FAQ_ITEMS} />
+      </Section>
+
+
+      {/* Founder */}
+      <Section eyebrow="Founder & Director" title="Guiding SNIT with practical computer education">
+        <div className="grid items-center gap-10 rounded-3xl border border-navy-100 bg-white p-8 shadow-card dark:border-navy-700 dark:bg-navy-800 lg:grid-cols-[0.75fr_1.25fr]">
+          <div className="mx-auto flex h-64 w-64 items-center justify-center overflow-hidden rounded-3xl border border-gold/30 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 text-cream shadow-gold">
+            <div className="text-center">
+              <UserRound className="mx-auto mb-4 text-gold" size={72} />
+              <p className="font-display text-4xl font-semibold text-gold">NG</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-cream/60">Founder</p>
+            </div>
+          </div>
+          <div>
+            <p className="eyebrow text-gold-deep dark:text-gold">Sri Natesh Computer Center</p>
+            <h3 className="mt-3 font-display text-3xl font-semibold text-navy-900 dark:text-cream sm:text-4xl">
+              Mr. Natesh Gowda
+            </h3>
+            <p className="mt-2 font-semibold text-navy-600 dark:text-cream/70">
+              Founder & Director
+            </p>
+            <p className="mt-5 text-balance leading-relaxed text-navy-600 dark:text-cream/70">
+              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda has helped SNIT become a trusted computer training institute in Mulbagal.
+            </p>
+            <p className="mt-4 text-balance leading-relaxed text-navy-600 dark:text-cream/70">
+              The institute focuses on affordable computer education, hands-on training, career-ready skills and personal guidance for students, job seekers and working professionals.
+            </p>
+          </div>
+        </div>
       </Section>
 
       {/* CTA */}

@@ -5,7 +5,18 @@ import TypingText from "./TypingText";
 import Particles from "./Particles";
 import SealBadge from "./SealBadge";
 
-const COURSE_WORDS = ["DCA", "ADCA", "PGDCA", "Tally with GST", "Python", "Web Designing", "Abacus"];
+const COURSE_WORDS = [
+  "CIT",
+  "DCA",
+  "ADCA",
+  "PGDCA",
+  "DTP",
+  "Tally with GST",
+  "Hardware & Networking",
+  "Multimedia & Graphics",
+  "Web Designing",
+  "Abacus Academy",
+];
 
 export default function Hero() {
   return (
@@ -36,7 +47,7 @@ export default function Hero() {
           </p>
 
           <p className="mt-5 max-w-xl text-balance text-base leading-relaxed text-cream/70">
-            {SITE.tagline} For over 15 years, Sri Natesh Computer Center has trained students and job-seekers of
+            {SITE.tagline} For over 20 years, Sri Natesh Computer Center has trained students and job-seekers of
             Mulbagal in office applications, accounting, programming, hardware and design — with small batches and
             hands-on practice on real machines.
           </p>

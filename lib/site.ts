@@ -27,7 +27,7 @@ export const SITE = {
     "https://www.google.com/maps?q=Sri+Natesh+Computer+Center+Thyagaraja+Colony+Mulbagal+Karnataka+563131&output=embed",
   mapLink: "https://share.google/0rVgg6jGRrsZAGQZp",
   stats: [
-    { label: "Years of Training Excellence", value: "15+" },
+    { label: "Years of Training Excellence", value: "20+" },
     { label: "Students Trained", value: "6000+" },
     { label: "Courses Offered", value: "20+" },
     { label: "Recognized Programs", value: "RCSS" },
