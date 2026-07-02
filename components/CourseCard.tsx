@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Clock, X, CheckCircle2 } from "lucide-react";
+import { Clock, X, CheckCircle2, GraduationCap } from "lucide-react";
 import type { Course } from "@/lib/courses";
 import EnquiryForm from "./EnquiryForm";
 
@@ -15,6 +15,9 @@ export default function CourseCard({ course }: { course: Course }) {
         <h3 className="font-display text-xl font-semibold text-navy-900 dark:text-cream">{course.name}</h3>
         <p className="mt-2 flex items-center gap-1.5 text-xs text-navy-500 dark:text-cream/60">
           <Clock size={14} /> {course.duration}
+        </p>
+        <p className="mt-1 flex items-center gap-1.5 text-xs text-navy-500 dark:text-cream/60">
+          <GraduationCap size={14} /> Eligibility: {course.eligibility}
         </p>
         <p className="mt-3 flex-1 text-sm leading-relaxed text-navy-600 dark:text-cream/70">{course.summary}</p>
         <ul className="mt-4 space-y-1.5">

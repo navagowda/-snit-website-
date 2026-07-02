@@ -2,15 +2,16 @@ export const SITE = {
   name: "Sri Natesh Computer Center",
   shortName: "SNIT",
   tagline: "Learning Never Exhausts the Mind.",
+  director: "Mr. Natesh Gowda",
   description:
-    "Sri Natesh Computer Center (SNIT) in Mulbagal, Karnataka offers career-focused computer education — DCA, ADCA, PGDCA, Tally with GST, Hardware, Web Designing, Python, Abacus and more. Recognized by RCSS Bangalore, Government of Karnataka and Skill India.",
+    "Sri Natesh Computer Center (SNIT) in Mulbagal, Karnataka offers career-focused computer education including CIT, DIT, DCA, PGDCA, Tally, Hardware, Multimedia, Abacus Academy and teacher training courses. Recognized by RCSS Bangalore, Government of Karnataka and Skill India.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.snitmulbagal.in",
   address: {
-    line1: "Thygaraja Colony",
+    line1: "Thyagaraja Colony",
     city: "Mulbagal",
     state: "Karnataka",
     pincode: "563131",
-    full: "Thygaraja Colony, Mulbagal, Karnataka - 563131",
+    full: "Thyagaraja Colony, Mulbagal, Karnataka - 563131",
   },
   phones: ["9739266491", "9035590734", "6360379274"],
   primaryPhone: "9739266491",
@@ -18,18 +19,18 @@ export const SITE = {
   emails: ["reachnatesh22@gmail.com", "nateshcomputer@gmail.com"],
   recognitions: ["RCSS Bangalore", "Government of Karnataka", "Skill India"],
   social: {
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
-    youtube: "https://youtube.com/",
+    facebook: "",
+    instagram: "https://www.instagram.com/sri_natesh_computer_center?igsh=MXVhNHA2dzhjMXV1cw==",
+    youtube: "",
   },
   mapEmbedSrc:
-    "https://www.google.com/maps?q=Mulbagal,+Karnataka+563131&output=embed",
-  mapLink: "https://maps.google.com/?q=Thygaraja+Colony+Mulbagal+Karnataka+563131",
+    "https://www.google.com/maps?q=Sri+Natesh+Computer+Center+Thyagaraja+Colony+Mulbagal+Karnataka+563131&output=embed",
+  mapLink: "https://share.google/0rVgg6jGRrsZAGQZp",
   stats: [
     { label: "Years of Training Excellence", value: "15+" },
     { label: "Students Trained", value: "6000+" },
     { label: "Courses Offered", value: "20+" },
-    { label: "Placement & Guidance Support", value: "100%" },
+    { label: "Recognized Programs", value: "RCSS" },
   ],
 };
 

@@ -16,15 +16,21 @@ export default function Footer() {
           </Link>
           <p className="text-sm leading-relaxed text-cream/60">{SITE.tagline}</p>
           <div className="mt-5 flex gap-3">
-            <a href={SITE.social.facebook} aria-label="Facebook" className="rounded-full border border-cream/20 p-2 hover:border-gold hover:text-gold">
-              <Facebook size={16} />
-            </a>
-            <a href={SITE.social.instagram} aria-label="Instagram" className="rounded-full border border-cream/20 p-2 hover:border-gold hover:text-gold">
-              <Instagram size={16} />
-            </a>
-            <a href={SITE.social.youtube} aria-label="YouTube" className="rounded-full border border-cream/20 p-2 hover:border-gold hover:text-gold">
-              <Youtube size={16} />
-            </a>
+            {SITE.social.facebook && (
+              <a href={SITE.social.facebook} aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="rounded-full border border-cream/20 p-2 hover:border-gold hover:text-gold">
+                <Facebook size={16} />
+              </a>
+            )}
+            {SITE.social.instagram && (
+              <a href={SITE.social.instagram} aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="rounded-full border border-cream/20 p-2 hover:border-gold hover:text-gold">
+                <Instagram size={16} />
+              </a>
+            )}
+            {SITE.social.youtube && (
+              <a href={SITE.social.youtube} aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="rounded-full border border-cream/20 p-2 hover:border-gold hover:text-gold">
+                <Youtube size={16} />
+              </a>
+            )}
           </div>
         </div>
 
@@ -46,7 +52,7 @@ export default function Footer() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-2">
               <MapPin size={16} className="mt-0.5 shrink-0 text-gold" />
-              <span>{SITE.address.full}</span>
+              <a href={SITE.mapLink} target="_blank" rel="noopener noreferrer" className="hover:text-gold">{SITE.address.full}</a>
             </li>
             {SITE.phones.map((p) => (
               <li key={p} className="flex items-center gap-2">
