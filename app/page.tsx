@@ -144,7 +144,7 @@ export default function HomePage() {
           <div className="mx-auto w-full max-w-md overflow-hidden rounded-3xl border-4 border-gold bg-cream shadow-gold">
             <Image
               src="/images/founder-natesh-gowda.jpg"
-              alt="Mr. Natesh Gowda, Founder and Director of Sri Natesh Computer Center"
+              alt="Mr. Natesh Gowda R, Founder and Director of Sri Natesh Computer Center"
               width={1000}
               height={750}
               className="h-full w-full object-cover"
