@@ -27,18 +27,18 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-cream/90 shadow-card backdrop-blur-md dark:bg-navy-900/90"
-          : "bg-transparent"
+          ? "bg-cream/95 shadow-card backdrop-blur-md dark:bg-cream/95"
+          : "bg-cream/95"
       }`}
     >
-      <div className="container-snit flex h-[4.5rem] items-center justify-between py-3">
+      <div className="container-snit flex h-[5rem] items-center justify-between py-3">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/images/logo.png" alt="SNIT — Sri Natesh Computer Center logo" width={48} height={48} priority className="h-12 w-12" />
+          <Image src="/images/logo.png" alt="SNIT — Sri Natesh Computer Center logo" width={60} height={60} priority className="h-14 w-14" />
           <div className="leading-tight">
-            <p className="font-display text-lg font-semibold text-navy-900 dark:text-cream">
-              Sri Natesh <span className="text-gold-deep dark:text-gold">Computer Center</span>
+            <p className="font-display text-2xl font-bold text-navy-900 dark:text-navy-900">
+              Sri Natesh <span className="text-navy-900 dark:text-navy-900">Computer Center</span>
             </p>
-            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-navy-500 dark:text-navy-200">
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-leaf dark:text-leaf">
               {SITE.tagline}
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function Navbar() {
               className={`text-sm font-medium transition-colors hover:text-gold-deep dark:hover:text-gold ${
                 pathname === link.href
                   ? "text-gold-deep dark:text-gold"
-                  : "text-navy-700 dark:text-cream/80"
+                  : "text-navy-800 dark:text-navy-800"
               }`}
             >
               {link.label}
@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="p-2 text-navy-900 lg:hidden dark:text-cream"
+          className="p-2 text-navy-900 lg:hidden dark:text-navy-900"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -83,7 +83,7 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <div className="border-t border-navy-100 bg-cream px-5 pb-6 pt-2 lg:hidden dark:border-navy-700 dark:bg-navy-900">
+        <div className="border-t border-navy-100 bg-cream px-5 pb-6 pt-2 lg:hidden dark:border-navy-100 dark:bg-cream">
           <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <Link
@@ -92,7 +92,7 @@ export default function Navbar() {
                 className={`rounded-lg px-3 py-3 text-sm font-medium ${
                   pathname === link.href
                     ? "bg-gold/10 text-gold-deep dark:text-gold"
-                    : "text-navy-700 dark:text-cream/80"
+                    : "text-navy-800 dark:text-navy-800"
                 }`}
               >
                 {link.label}

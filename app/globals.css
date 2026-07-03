@@ -16,7 +16,7 @@
     @apply bg-gold/40 text-navy-900;
   }
   :focus-visible {
-    outline: 2px solid #F0B429;
+    outline: 2px solid #D4AF37;
     outline-offset: 3px;
   }
 }

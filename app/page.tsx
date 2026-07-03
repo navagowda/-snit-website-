@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import {
   Laptop, Award, Users, BookOpenCheck, ArrowRight, Sparkles, ShieldCheck, Clock,
@@ -138,12 +139,15 @@ export default function HomePage() {
 
       {/* Founder */}
       <Section eyebrow="Founder & Director" title="Guiding SNIT with practical computer education">
-        <div className="grid items-center gap-10 rounded-3xl border border-navy-100 bg-white p-8 shadow-card dark:border-navy-700 dark:bg-navy-800 lg:grid-cols-[0.75fr_1.25fr]">
-          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-3xl border-4 border-gold/40 bg-cream shadow-gold">
-            <img
-              src="/images/founder-natesh.jpg"
+        <div className="grid items-center gap-10 rounded-3xl border border-gold/30 bg-cream p-8 shadow-card dark:border-gold/20 dark:bg-navy-900 lg:grid-cols-[0.85fr_1.15fr]">
+          <div className="mx-auto w-full max-w-md overflow-hidden rounded-3xl border-4 border-gold bg-cream shadow-gold">
+            <Image
+              src="/images/founder-natesh-gowda.jpg"
               alt="Mr. Natesh Gowda, Founder and Director of Sri Natesh Computer Center"
+              width={1000}
+              height={750}
               className="h-full w-full object-cover"
+              priority={false}
             />
           </div>
           <div>
@@ -155,7 +159,7 @@ export default function HomePage() {
               Founder & Director
             </p>
             <p className="mt-5 text-balance leading-relaxed text-navy-600 dark:text-cream/70">
-              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda has helped SNIT become a trusted computer training institute in Mulbagal.
+              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda has helped SNIT become a trusted computer training institute in Mulbagal for 20+ years.
             </p>
             <p className="mt-4 text-balance leading-relaxed text-navy-600 dark:text-cream/70">
               The institute focuses on affordable computer education, hands-on training, career-ready skills and personal guidance for students, job seekers and working professionals.
