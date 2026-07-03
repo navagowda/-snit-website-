@@ -154,7 +154,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow text-gold-deep dark:text-gold">Sri Natesh Computer Center</p>
             <h3 className="mt-3 font-display text-3xl font-semibold text-navy-900 dark:text-cream sm:text-4xl">
-              Mr. Natesh Gowda
+              Mr. Natesh Gowda R
             </h3>
             <p className="mt-2 font-semibold text-navy-600 dark:text-cream/70">
               Founder & Director
