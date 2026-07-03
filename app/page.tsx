@@ -160,7 +160,7 @@ export default function HomePage() {
               Founder & Director
             </p>
             <p className="mt-5 text-balance leading-relaxed text-navy-600 dark:text-cream/70">
-              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda has helped SNIT become a trusted computer training institute in Mulbagal for 20+ years.
+              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda K has helped SNIT become a trusted computer training institute in Mulbagal for 20+ years.
             </p>
             <p className="mt-4 text-balance leading-relaxed text-navy-600 dark:text-cream/70">
               The institute focuses on affordable computer education, hands-on training, career-ready skills and personal guidance for students, job seekers and working professionals.
