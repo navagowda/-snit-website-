@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Brain, Sparkles, ShieldCheck, Calculator, Calendar, Clock } from "lucide-react";
 import Section from "@/components/Section";
-import Gallery, { type GalleryItem } from "@/components/Gallery";
+import Gallery from "@/components/Gallery";
 import EnquiryForm from "@/components/EnquiryForm";
 import { SITE } from "@/lib/site";
+import { GALLERY_PHOTOS } from "@/lib/gallery";
 
 export const metadata: Metadata = {
   title: "Abacus Academy",
@@ -25,12 +26,7 @@ const SCHEDULE = [
   { day: "Sunday", time: "10:30 AM – 12:30 PM" },
 ];
 
-const GALLERY_ITEMS: GalleryItem[] = [
-  { id: "a1", category: "Abacus", caption: "Weekend abacus batch in session", gradient: "linear-gradient(135deg,#0F9D58,#0B1830)" },
-  { id: "a2", category: "Abacus", caption: "Mental maths practice drills", gradient: "linear-gradient(135deg,#F0B429,#0F9D58)" },
-  { id: "a3", category: "Abacus", caption: "Certificate distribution day", gradient: "linear-gradient(135deg,#FF9933,#D4A017)" },
-  { id: "a4", category: "Abacus", caption: "Group speed-calculation contest", gradient: "linear-gradient(135deg,#0B1830,#2C4680)" },
-];
+const ABACUS_PHOTOS = GALLERY_PHOTOS.filter((p) => p.category === "Abacus");
 
 export default function AbacusAcademyPage() {
   return (
@@ -101,7 +97,7 @@ export default function AbacusAcademyPage() {
       </section>
 
       <Section eyebrow="Student Gallery" title="Moments from our Abacus Academy">
-        <Gallery items={GALLERY_ITEMS} />
+        <Gallery items={ABACUS_PHOTOS} showTabs={false} />
       </Section>
 
       <Section id="enroll" eyebrow="Admissions" title="Enroll your child in the SNIT Abacus Academy">

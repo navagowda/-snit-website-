@@ -8,7 +8,7 @@ import { SITE } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Sri Natesh Computer Center (SNIT), Thygaraja Colony, Mulbagal, Karnataka - 563131. Call, WhatsApp, email, or visit our center directly.",
+    "Get in touch with Sri Natesh Computer Center (SNIT), Thyagaraja Colony, Mulbagal, Karnataka - 563131. Call, WhatsApp, email, or visit our center directly.",
   alternates: { canonical: "/contact" },
 };
 

@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container-snit grid gap-10 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <Link href="/" className="mb-4 flex items-center gap-3">
-            <Image src="/images/logo.png" alt="SNIT logo" width={44} height={44} className="h-11 w-11" />
+            <Image src="/images/snit-logo-official.png" alt="SNIT logo" width={44} height={44} className="h-11 w-11" />
             <span className="font-display text-lg font-semibold text-cream">
               Sri Natesh <span className="text-gold">Computer Center</span>
             </span>

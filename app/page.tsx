@@ -9,7 +9,6 @@ import Section from "@/components/Section";
 import CourseCard from "@/components/CourseCard";
 import TestimonialsSlider from "@/components/TestimonialsSlider";
 import FAQ from "@/components/FAQ";
-import SealBadge from "@/components/SealBadge";
 import { COURSES } from "@/lib/courses";
 import { SITE } from "@/lib/site";
 
@@ -57,10 +56,12 @@ export default function HomePage() {
               Learn Our Story <ArrowRight size={16} />
             </Link>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-8 rounded-3xl border border-navy-100 bg-white p-10 shadow-card dark:border-navy-700 dark:bg-navy-800">
-            {SITE.recognitions.map((r) => (
-              <SealBadge key={r} label={r} size="md" />
-            ))}
+          <div className="flex flex-col items-center justify-center gap-5 rounded-3xl border border-navy-100 bg-white p-10 text-center shadow-card dark:border-navy-700 dark:bg-navy-800">
+            <Image src="/images/rcss-logo.png" alt="The RCSS Bangalore — Rastriya Computer Saksharatha Samithi" width={160} height={195} className="h-40 w-auto" />
+            <p className="max-w-xs text-sm text-navy-500 dark:text-cream/60">
+              Recognized by <span className="font-semibold text-navy-800 dark:text-cream">RCSS Bangalore</span>,
+              Government of Karnataka &amp; Skill India
+            </p>
           </div>
         </div>
       </Section>

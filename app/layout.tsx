@@ -45,17 +45,17 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: `${SITE.name} (SNIT) — Computer Training Institute in Mulbagal, Karnataka`,
     description: SITE.description,
-    images: [{ url: "/images/logo.png", width: 1200, height: 1200, alt: SITE.name }],
+    images: [{ url: "/images/og-image.png", width: 1200, height: 1200, alt: SITE.name }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE.name} (SNIT)`,
     description: SITE.description,
-    images: ["/images/logo.png"],
+    images: ["/images/og-image.png"],
   },
   icons: {
-    icon: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: "/images/snit-logo-official.png",
+    apple: "/images/snit-logo-official.png",
   },
   robots: { index: true, follow: true },
 };
@@ -68,8 +68,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     alternateName: SITE.shortName,
     description: SITE.description,
     url: SITE.url,
-    logo: `${SITE.url}/images/logo.png`,
-    image: `${SITE.url}/images/logo.png`,
+    logo: `${SITE.url}/images/snit-logo-official.png`,
+    image: `${SITE.url}/images/snit-logo-official.png`,
     telephone: SITE.phones.map((p) => `+91${p}`),
     email: SITE.emails,
     address: {

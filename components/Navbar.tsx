@@ -33,7 +33,7 @@ export default function Navbar() {
     >
       <div className="container-snit flex h-[5rem] items-center justify-between py-3">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/images/logo.png" alt="SNIT — Sri Natesh Computer Center logo" width={60} height={60} priority className="h-14 w-14" />
+          <Image src="/images/snit-logo-official.png" alt="SNIT — Sri Natesh Computer Center logo" width={60} height={60} priority className="h-14 w-14" />
           <div className="leading-tight">
             <p className="font-display text-2xl font-bold text-navy-900 dark:text-navy-900">
               Sri Natesh <span className="text-navy-900 dark:text-navy-900">Computer Center</span>

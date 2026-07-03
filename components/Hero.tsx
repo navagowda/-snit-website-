@@ -1,9 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, MessageCircle, Download, GraduationCap } from "lucide-react";
 import { SITE } from "@/lib/site";
+import { GALLERY_PHOTOS } from "@/lib/gallery";
 import TypingText from "./TypingText";
 import Particles from "./Particles";
 import SealBadge from "./SealBadge";
+
+const heroLab = GALLERY_PHOTOS.find((p) => p.id === "computer-lab-01")!;
+const heroStrip = GALLERY_PHOTOS.filter((p) => ["computer-lab-02", "classroom-01", "building-01"].includes(p.id));
 
 const COURSE_WORDS = [
   "CIT",
@@ -87,8 +92,8 @@ export default function Hero() {
             <SealBadge label="Since Est." size="sm" />
           </div>
           {/* Computer lab illustration */}
-          <div className="rounded-3xl border border-gold/20 bg-navy-800/70 p-6 shadow-gold backdrop-blur">
-            <div className="mb-4 flex items-center justify-between">
+          <div className="rounded-3xl border border-gold/20 bg-navy-800/70 p-4 shadow-gold backdrop-blur">
+            <div className="mb-3 flex items-center justify-between px-2 pt-1">
               <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-gold">SNIT Computer Lab</span>
               <span className="flex gap-1">
                 <span className="h-2 w-2 rounded-full bg-leaf" />
@@ -96,26 +101,25 @@ export default function Hero() {
                 <span className="h-2 w-2 rounded-full bg-saffron" />
               </span>
             </div>
-            <div className="grid grid-cols-3 gap-3">
-              {Array.from({ length: 9 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="aspect-[4/3] rounded-md border border-gold/20 bg-gradient-to-br from-navy-700 to-navy-900 p-1.5"
-                >
-                  <div className="h-full w-full rounded-sm border border-gold/10 bg-navy-950 p-1">
-                    <div
-                      className="h-full w-full rounded-[2px]"
-                      style={{
-                        background:
-                          "linear-gradient(135deg, rgba(240,180,41,0.35), rgba(255,153,51,0.12), transparent 70%)",
-                      }}
-                    />
-                  </div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-gold/20">
+              <Image
+                src={heroLab.src}
+                alt={heroLab.title}
+                fill
+                sizes="(max-width: 1024px) 90vw, 480px"
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="mt-3 grid grid-cols-3 gap-2">
+              {heroStrip.map((p) => (
+                <div key={p.id} className="relative aspect-square overflow-hidden rounded-lg border border-gold/10">
+                  <Image src={p.thumb} alt={p.title} fill sizes="150px" className="object-cover" />
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-center text-xs text-cream/50">
-              9-seat practical lab · one system per student · live guided sessions
+            <p className="mt-4 px-2 pb-1 text-center text-xs text-cream/50">
+              Real photos from our lab · one system per student · live guided sessions
             </p>
           </div>
         </div>
