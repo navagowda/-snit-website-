@@ -10,69 +10,103 @@ const config: Config = {
     extend: {
       colors: {
         navy: {
-          DEFAULT: "#0B1830",
-          50: "#EEF1F7",
-          100: "#DCE2EF",
-          200: "#B3C0DC",
-          300: "#8199C8",
-          400: "#4E6BA6",
-          500: "#2C4680",
-          600: "#1B2E5C",
-          700: "#132445",
-          800: "#0E1B34",
-          900: "#0B1830",
-          950: "#070F20",
+          DEFAULT: "#7B112D",
+          50: "#FDF3F6",
+          100: "#F9E4EA",
+          200: "#F3C8D5",
+          300: "#E89BB1",
+          400: "#D96A8D",
+          500: "#C73B69",
+          600: "#A81F4D",
+          700: "#7B112D",
+          800: "#5E0D22",
+          900: "#430918",
+          950: "#2A0410",
         },
+
         gold: {
-          DEFAULT: "#F0B429",
-          light: "#FCD980",
-          deep: "#D4A017",
+          DEFAULT: "#D4AF37",
+          light: "#F5D76E",
+          deep: "#B8860B",
         },
-        saffron: "#FF9933",
+
+        saffron: "#C89B2C",
+
         leaf: "#0F9D58",
-        cream: "#FAF7F0",
-        ink: "#14161B",
+
+        cream: "#FFF9F0",
+
+        white: "#FFFFFF",
+
+        ink: "#1B1B1B",
       },
+
       fontFamily: {
         display: ["var(--font-fraunces)", "Georgia", "serif"],
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
         mono: ["var(--font-jbmono)", "monospace"],
       },
+
       backgroundImage: {
-        "seal-ring": "conic-gradient(from 90deg, #D4A017, #F0B429, #FCD980, #F0B429, #D4A017)",
-        "navy-radial": "radial-gradient(circle at 20% 20%, #132445 0%, #0B1830 55%, #070F20 100%)",
+        "seal-ring":
+          "conic-gradient(from 90deg,#B8860B,#D4AF37,#F5D76E,#D4AF37,#B8860B)",
+
+        "navy-radial":
+          "radial-gradient(circle at 20% 20%, #9B1B3D 0%, #7B112D 55%, #430918 100%)",
       },
+
       boxShadow: {
-        gold: "0 8px 30px -8px rgba(240,180,41,0.45)",
-        card: "0 10px 40px -12px rgba(11,24,48,0.25)",
+        gold: "0 10px 35px -10px rgba(212,175,55,0.45)",
+        card: "0 10px 35px -10px rgba(123,17,45,0.25)",
       },
+
       keyframes: {
         float: {
           "0%,100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-12px)" },
         },
+
         "spin-slow": {
           from: { transform: "rotate(0deg)" },
           to: { transform: "rotate(360deg)" },
         },
+
         marquee: {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-50%)" },
         },
+
         blink: {
           "0%,100%": { opacity: "1" },
           "50%": { opacity: "0" },
         },
+
         "fade-up": {
-          from: { opacity: "0", transform: "translateY(24px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
+          from: {
+            opacity: "0",
+            transform: "translateY(24px)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translateY(0)",
+          },
         },
+
         particle: {
-          "0%": { transform: "translateY(0) translateX(0)", opacity: "0" },
-          "10%": { opacity: "1" },
-          "100%": { transform: "translateY(-140px) translateX(20px)", opacity: "0" },
+          "0%": {
+            transform: "translateY(0) translateX(0)",
+            opacity: "0",
+          },
+          "10%": {
+            opacity: "1",
+          },
+          "100%": {
+            transform: "translateY(-140px) translateX(20px)",
+            opacity: "0",
+          },
         },
       },
+
       animation: {
         float: "float 6s ease-in-out infinite",
         "spin-slow": "spin-slow 14s linear infinite",
@@ -85,4 +119,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;
