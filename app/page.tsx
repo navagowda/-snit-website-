@@ -144,7 +144,7 @@ export default function HomePage() {
           <div className="mx-auto w-full max-w-md overflow-hidden rounded-3xl border-4 border-gold bg-cream shadow-gold">
             <Image
               src="/images/founder-natesh-gowda.jpg"
-              alt="Mr. Natesh Gowda R, Founder and Director of Sri Natesh Computer Center"
+              alt="Mr. Natesh Gowda K, Founder and Director of Sri Natesh Computer Center"
               width={1000}
               height={750}
               className="h-full w-full object-cover"
@@ -154,7 +154,7 @@ export default function HomePage() {
           <div>
             <p className="eyebrow text-gold-deep dark:text-gold">Sri Natesh Computer Center</p>
             <h3 className="mt-3 font-display text-3xl font-semibold text-navy-900 dark:text-cream sm:text-4xl">
-              Mr. Natesh Gowda R
+              Mr. Natesh Gowda K
             </h3>
             <p className="mt-2 font-semibold text-navy-600 dark:text-cream/70">
               Founder & Director
