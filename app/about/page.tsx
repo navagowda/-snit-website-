@@ -66,7 +66,7 @@ export default function AboutPage() {
           <div className="mx-auto w-full max-w-md overflow-hidden rounded-3xl border-4 border-gold bg-navy-900 shadow-gold">
             <Image
               src="/images/founder-natesh-gowda.jpg"
-              alt="Mr. Natesh Gowda, Founder and Director of Sri Natesh Computer Center"
+              alt="Mr. Natesh Gowda K, Founder and Director of Sri Natesh Computer Center"
               width={1000}
               height={750}
               className="h-full w-full object-cover"
@@ -74,10 +74,10 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="eyebrow text-gold">Sri Natesh Computer Center</p>
-            <h3 className="mt-3 font-display text-3xl font-semibold text-cream sm:text-4xl">Mr. Natesh Gowda</h3>
+            <h3 className="mt-3 font-display text-3xl font-semibold text-cream sm:text-4xl">Mr. Natesh Gowda K</h3>
             <p className="mt-2 font-semibold text-cream/80">Founder &amp; Director</p>
             <p className="mt-5 text-balance leading-relaxed text-cream/70">
-              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda has
+              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda K has
               helped SNIT become a trusted computer training institute in Mulbagal for 20+ years.
             </p>
             <p className="mt-4 text-balance leading-relaxed text-cream/70">
