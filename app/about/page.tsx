@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Target, Eye, HeartHandshake, Building2 } from "lucide-react";
+import { Target, Eye, HeartHandshake, Building2, MapPin } from "lucide-react";
 import Section from "@/components/Section";
 import { SITE } from "@/lib/site";
 import { GALLERY_PHOTOS } from "@/lib/gallery";
 
 const buildingPhoto = GALLERY_PHOTOS.find((p) => p.id === "building-01")!;
 
+const MAP_LINK = "https://maps.google.com/?q=Sri+Natesh+Computer+Center+Thyagaraja+Colony+Mulbagal";
+
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about Sri Natesh Computer Center (SNIT) in Mulbagal — our story, mission, and the recognitions (RCSS Bangalore, Government of Karnataka, Skill India) behind our computer training programs.",
+    "Learn about Sri Natesh Computer Center (SNIT) in Mulbagal — our story, mission, and the recognitions behind our computer training programs.",
   alternates: { canonical: "/about" },
 };
 
@@ -32,7 +34,9 @@ export default function AboutPage() {
     <>
       <section className="bg-navy-radial py-20 text-center text-cream">
         <div className="container-snit">
-          <span className="eyebrow border border-gold/30 bg-gold/10 rounded-full px-4 py-1.5 text-gold">About SNIT</span>
+          <span className="eyebrow rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-gold">
+            About SNIT
+          </span>
           <h1 className="mx-auto mt-5 max-w-3xl text-balance font-display text-4xl font-semibold sm:text-5xl">
             Learning Never Exhausts the Mind.
           </h1>
@@ -54,7 +58,7 @@ export default function AboutPage() {
           <p>
             Today, SNIT offers a full spectrum of programs: foundational computer literacy, diploma-level courses
             like DCA, ADCA and PGDCA, professional skills such as Tally with GST and DTP, creative and technical
-            tracks in multimedia, programming, Python and web designing, and dedicated typing and distance-education
+            tracks in multimedia, programming and web designing, and dedicated typing and distance-education
             support. Our SNIT Abacus Academy extends this same hands-on philosophy to children, building focus and
             mental math from an early age.
           </p>
@@ -66,7 +70,7 @@ export default function AboutPage() {
           <div className="mx-auto w-full max-w-md overflow-hidden rounded-3xl border-4 border-gold bg-navy-900 shadow-gold">
             <Image
               src="/images/founder-natesh-gowda.jpg"
-              alt="Mr. Natesh Gowda K, Founder and Director of Sri Natesh Computer Center"
+              alt="Mr. Natesh Gowda R, Founder and Director of Sri Natesh Computer Center"
               width={1000}
               height={750}
               className="h-full w-full object-cover"
@@ -74,10 +78,12 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="eyebrow text-gold">Sri Natesh Computer Center</p>
-            <h3 className="mt-3 font-display text-3xl font-semibold text-cream sm:text-4xl">Mr. Natesh Gowda K</h3>
+            <h3 className="mt-3 font-display text-3xl font-semibold text-cream sm:text-4xl">
+              Mr. Natesh Gowda R
+            </h3>
             <p className="mt-2 font-semibold text-cream/80">Founder &amp; Director</p>
             <p className="mt-5 text-balance leading-relaxed text-cream/70">
-              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda K has
+              With a commitment to quality education, practical learning and student success, Mr. Natesh Gowda R has
               helped SNIT become a trusted computer training institute in Mulbagal for 20+ years.
             </p>
             <p className="mt-4 text-balance leading-relaxed text-cream/70">
@@ -105,7 +111,9 @@ export default function AboutPage() {
           {TIMELINE.map((item) => (
             <div key={item.year} className="relative">
               <span className="absolute -left-[38px] top-1 h-3 w-3 rounded-full bg-gold" />
-              <p className="font-mono text-xs uppercase tracking-[0.25em] text-gold-deep dark:text-gold">{item.year}</p>
+              <p className="font-mono text-xs uppercase tracking-[0.25em] text-gold-deep dark:text-gold">
+                {item.year}
+              </p>
               <p className="mt-1 text-navy-600 dark:text-cream/70">{item.text}</p>
             </div>
           ))}
@@ -114,7 +122,13 @@ export default function AboutPage() {
 
       <Section eyebrow="Recognized By" title="Certifications you can trust">
         <div className="mx-auto flex max-w-xl flex-col items-center justify-center gap-5 rounded-3xl border border-navy-100 bg-white p-10 text-center shadow-card dark:border-navy-700 dark:bg-navy-800">
-          <Image src="/images/rcss-logo.png" alt="The RCSS Bangalore — Rastriya Computer Saksharatha Samithi" width={180} height={220} className="h-44 w-auto" />
+          <Image
+            src="/images/rcss-logo.png"
+            alt="The RCSS Bangalore — Rastriya Computer Saksharatha Samithi"
+            width={180}
+            height={220}
+            className="h-44 w-auto"
+          />
           <p className="max-w-sm text-sm text-navy-500 dark:text-cream/60">
             SNIT is recognized by <span className="font-semibold text-navy-800 dark:text-cream">RCSS Bangalore</span>,
             the Government of Karnataka, and Skill India.
@@ -124,12 +138,43 @@ export default function AboutPage() {
 
       <Section eyebrow="Visit Us" title="Our center in Mulbagal">
         <div className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-navy-100 shadow-card dark:border-navy-700">
-            <Image src={buildingPhoto.src} alt={buildingPhoto.title} fill sizes="(max-width: 640px) 100vw, 480px" className="object-cover" />
-          </div>
-          <div className="flex items-start gap-4 rounded-2xl border border-navy-100 bg-white p-6 shadow-card dark:border-navy-700 dark:bg-navy-800">
-            <Building2 className="mt-1 shrink-0 text-gold-deep dark:text-gold" size={24} />
-            <p className="text-navy-700 dark:text-cream/80">{SITE.address.full}</p>
+          <a
+            href={MAP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-navy-100 shadow-card transition hover:scale-[1.01] dark:border-navy-700"
+          >
+            <Image
+              src={buildingPhoto.src}
+              alt={buildingPhoto.title}
+              fill
+              sizes="(max-width: 640px) 100vw, 480px"
+              className="object-cover"
+            />
+          </a>
+
+          <div className="flex flex-col gap-5 rounded-2xl border border-navy-100 bg-white p-6 shadow-card dark:border-navy-700 dark:bg-navy-800">
+            <div className="flex items-start gap-4">
+              <Building2 className="mt-1 shrink-0 text-gold-deep dark:text-gold" size={24} />
+              <a
+                href={MAP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-navy-700 underline-offset-4 hover:text-gold-deep hover:underline dark:text-cream/80"
+              >
+                {SITE.address.full}
+              </a>
+            </div>
+
+            <a
+              href={MAP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold inline-flex w-fit items-center gap-2"
+            >
+              <MapPin size={16} />
+              Get Directions
+            </a>
           </div>
         </div>
       </Section>
