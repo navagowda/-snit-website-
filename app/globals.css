@@ -16,7 +16,7 @@
     @apply bg-gold/40 text-navy-900;
   }
   :focus-visible {
-    outline: 2px solid #F0B429;
+    outline: 2px solid #D4AF37;
     outline-offset: 3px;
   }
 }
@@ -37,10 +37,10 @@
     @apply btn bg-gold text-navy-900 shadow-gold hover:bg-gold-light hover:shadow-lg;
   }
   .btn-outline {
-    @apply btn border-2 border-cream/30 text-cream hover:border-gold hover:text-gold dark:border-navy-300/40;
+    @apply btn border-2 border-cream/50 text-cream hover:border-gold hover:text-gold dark:border-navy-300/40;
   }
   .btn-navy {
-    @apply btn bg-navy-900 text-cream hover:bg-navy-700 dark:bg-gold dark:text-navy-900;
+    @apply btn bg-navy-800 text-cream hover:bg-navy-700 dark:bg-gold dark:text-navy-900;
   }
   .btn-leaf {
     @apply btn bg-leaf text-white hover:brightness-110;
