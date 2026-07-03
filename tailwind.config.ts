@@ -32,9 +32,9 @@ const config: Config = {
 
         saffron: "#C89B2C",
 
-        leaf: "#0B5D1E",
+        leaf: "#0F9D58",
 
-        cream: "#FFF7D6",
+        cream: "#FFF9F0",
 
         white: "#FFFFFF",
 
@@ -52,7 +52,7 @@ const config: Config = {
           "conic-gradient(from 90deg,#B8860B,#D4AF37,#F5D76E,#D4AF37,#B8860B)",
 
         "navy-radial":
-          "radial-gradient(circle at 18% 20%, #9B1B3D 0%, #7B112D 52%, #430918 100%)",
+          "radial-gradient(circle at 20% 20%, #9B1B3D 0%, #7B112D 55%, #430918 100%)",
       },
 
       boxShadow: {

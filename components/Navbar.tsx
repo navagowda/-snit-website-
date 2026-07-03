@@ -25,37 +25,34 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b border-gold/20 bg-cream/95 transition-all duration-300 backdrop-blur-md dark:bg-cream/95 ${
-        scrolled ? "shadow-card" : ""
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-cream/90 shadow-card backdrop-blur-md dark:bg-navy-900/90"
+          : "bg-transparent"
       }`}
     >
-      <div className="container-snit flex min-h-[5.25rem] items-center justify-between py-3">
-        <Link href="/" className="flex min-w-0 items-center gap-3 sm:gap-4">
-          <Image
-            src="/images/logo.png"
-            alt="SNIT — Sri Natesh Computer Center logo"
-            width={64}
-            height={64}
-            priority
-            className="h-14 w-14 shrink-0 sm:h-16 sm:w-16"
-          />
-          <div className="min-w-0 leading-tight">
-            <p className="font-display text-[1.32rem] font-bold leading-tight text-navy-800 sm:text-3xl lg:text-[2rem]">
-              Sri Natesh Computer Center
+      <div className="container-snit flex h-[4.5rem] items-center justify-between py-3">
+        <Link href="/" className="flex items-center gap-3">
+          <Image src="/images/logo.png" alt="SNIT — Sri Natesh Computer Center logo" width={48} height={48} priority className="h-12 w-12" />
+          <div className="leading-tight">
+            <p className="font-display text-lg font-semibold text-navy-900 dark:text-cream">
+              Sri Natesh <span className="text-gold-deep dark:text-gold">Computer Center</span>
             </p>
-            <p className="mt-1 font-mono text-[9px] font-semibold uppercase tracking-[0.28em] text-leaf sm:text-xs">
+            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-navy-500 dark:text-navy-200">
               {SITE.tagline}
             </p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-semibold transition-colors hover:text-gold-deep ${
-                pathname === link.href ? "text-gold-deep" : "text-navy-700"
+              className={`text-sm font-medium transition-colors hover:text-gold-deep dark:hover:text-gold ${
+                pathname === link.href
+                  ? "text-gold-deep dark:text-gold"
+                  : "text-navy-700 dark:text-cream/80"
               }`}
             >
               {link.label}
@@ -67,7 +64,7 @@ export default function Navbar() {
           <button
             onClick={toggle}
             aria-label="Toggle dark mode"
-            className="rounded-full border border-navy-200 bg-white/70 p-2 text-navy-700 transition hover:border-gold hover:text-gold-deep"
+            className="rounded-full border border-navy-200 p-2 text-navy-700 transition hover:border-gold hover:text-gold-deep dark:border-navy-600 dark:text-cream"
           >
             {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
           </button>
@@ -77,23 +74,25 @@ export default function Navbar() {
         </div>
 
         <button
-          className="p-2 text-navy-800 lg:hidden"
+          className="p-2 text-navy-900 lg:hidden dark:text-cream"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
-          {open ? <X /> : <Menu size={30} />}
+          {open ? <X /> : <Menu />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-gold/20 bg-cream px-5 pb-6 pt-2 lg:hidden">
+        <div className="border-t border-navy-100 bg-cream px-5 pb-6 pt-2 lg:hidden dark:border-navy-700 dark:bg-navy-900">
           <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-lg px-3 py-3 text-sm font-semibold ${
-                  pathname === link.href ? "bg-gold/15 text-gold-deep" : "text-navy-700"
+                className={`rounded-lg px-3 py-3 text-sm font-medium ${
+                  pathname === link.href
+                    ? "bg-gold/10 text-gold-deep dark:text-gold"
+                    : "text-navy-700 dark:text-cream/80"
                 }`}
               >
                 {link.label}
@@ -103,7 +102,7 @@ export default function Navbar() {
           <div className="mt-4 flex items-center gap-3">
             <button
               onClick={toggle}
-              className="flex items-center gap-2 rounded-full border border-navy-200 bg-white/70 px-4 py-2 text-sm text-navy-700"
+              className="flex items-center gap-2 rounded-full border border-navy-200 px-4 py-2 text-sm text-navy-700 dark:border-navy-600 dark:text-cream"
             >
               {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />} Theme
             </button>

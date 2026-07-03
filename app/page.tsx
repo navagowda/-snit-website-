@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
-  Laptop, Award, Users, BookOpenCheck, ArrowRight, Sparkles, ShieldCheck, Clock, UserRound,
+  Laptop, Award, Users, BookOpenCheck, ArrowRight, Sparkles, ShieldCheck, Clock,
 } from "lucide-react";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -139,12 +139,12 @@ export default function HomePage() {
       {/* Founder */}
       <Section eyebrow="Founder & Director" title="Guiding SNIT with practical computer education">
         <div className="grid items-center gap-10 rounded-3xl border border-navy-100 bg-white p-8 shadow-card dark:border-navy-700 dark:bg-navy-800 lg:grid-cols-[0.75fr_1.25fr]">
-          <div className="mx-auto flex h-64 w-64 items-center justify-center overflow-hidden rounded-3xl border border-gold/30 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 text-cream shadow-gold">
-            <div className="text-center">
-              <UserRound className="mx-auto mb-4 text-gold" size={72} />
-              <p className="font-display text-4xl font-semibold text-gold">NG</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-cream/60">Founder</p>
-            </div>
+          <div className="mx-auto w-full max-w-sm overflow-hidden rounded-3xl border-4 border-gold/40 bg-cream shadow-gold">
+            <img
+              src="/images/founder-natesh.jpg"
+              alt="Mr. Natesh Gowda, Founder and Director of Sri Natesh Computer Center"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div>
             <p className="eyebrow text-gold-deep dark:text-gold">Sri Natesh Computer Center</p>
