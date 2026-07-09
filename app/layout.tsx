@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import CallFloat from "@/components/CallFloat";
 import BackToTop from "@/components/BackToTop";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -99,6 +100,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CallFloat />
           <BackToTop />
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
